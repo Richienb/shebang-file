@@ -1,13 +1,7 @@
 import test from "ava"
-import theModule from "."
+import shebangFile from "."
 
-test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async (t) => {
+    t.is(await shebangFile("fixtures/test.txt"), "bash")
+    t.is(await shebangFile("fixtures/testb.txt"), null)
 })

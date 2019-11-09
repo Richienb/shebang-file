@@ -1,41 +1,30 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Shebang File [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/shebang-file/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/shebang-file)
 
-My awesome module.
+Parse the shebang (if any) of a file.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/shebang-file.png)](https://npmjs.com/package/shebang-file)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install shebang-file
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const shebangFile = require("shebang-file");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+shebangFile("myFile.txt");
+//=> 'bash'
 ```
 
 ## API
 
-### theModule(input, options?)
+### shebangFile(filename)
 
-#### input
+#### filename
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The filename to parse the shebang from.

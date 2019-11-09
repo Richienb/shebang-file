@@ -1,7 +1,7 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const firstLine = require("firstline")
+const shebangCommand = require("shebang-command")
+const toBluebird = require("to-bluebird")
 
-    return `${input} & ${postfix}`
-}
+module.exports = (filename) => toBluebird(firstLine(filename)).then((line) => shebangCommand(line))

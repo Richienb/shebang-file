@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "shebang-file",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Parse the shebang (if any) of a file.",
+    "repository": "https://github.com/Richienb/shebang-file.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,14 +11,24 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "shebang",
+        "file",
+        "parse",
+        "bash"
+    ],
+    "dependencies": {
+        "bluebird": "^3.7.1",
+        "firstline": "^2.0.2",
+        "shebang-command": "^2.0.0",
+        "to-bluebird": "^1.0.2"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.6.0",

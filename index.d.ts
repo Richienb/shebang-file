@@ -1,14 +1,16 @@
+import Promise from "bluebird"
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Parse the shebang (if any) of a file.
+ * @param filename The filename to parse the shebang from.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const shebangFile = require("shebang-file");
+ *
+ * shebangFile("myFile.txt");
+ * //=> 'bash'
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function shebangFile(filename: string): Promise<string | null>;
 
-export = theModule;
+export = shebangFile;
