@@ -1,40 +1,41 @@
 {
-    "name": "shebang-file",
-    "version": "1.0.0",
-    "description": "Parse the shebang (if any) of a file.",
-    "repository": "https://github.com/Richienb/shebang-file.git",
-    "author": "Richie Bendall <richiebendall@gmail.com>",
-    "license": "MIT",
-    "main": "index.js",
-    "files": [
-        "index.js",
-        "index.d.ts"
-    ],
-    "engines": {
-        "node": ">=6"
-    },
-    "scripts": {
-        "lint": "eslint .",
-        "test": "yarn lint && ava"
-    },
-    "keywords": [
-        "shebang",
-        "file",
-        "parse",
-        "bash"
-    ],
-    "dependencies": {
-        "bluebird": "^3.7.1",
-        "firstline": "^2.0.2",
-        "shebang-command": "^2.0.0",
-        "to-bluebird": "^1.0.2"
-    },
-    "devDependencies": {
-        "ava": "^2.1.0",
-        "eslint": "^6.6.0",
-        "eslint-config-richienb": "^0.2.2"
-    },
-    "eslintConfig": {
-        "extends": "richienb/node"
-    }
+	"name": "shebang-file",
+	"version": "1.0.0",
+	"description": "Parse the shebang (if any) of a file.",
+	"repository": "https://github.com/Richienb/shebang-file.git",
+	"author": "Richie Bendall <richiebendall@gmail.com>",
+	"license": "MIT",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"lint": "xo",
+		"test": "yarn lint && ava"
+	},
+	"keywords": [
+		"shebang",
+		"file",
+		"parse",
+		"bash"
+	],
+	"dependencies": {
+		"firstline": "^2.0.2",
+		"shebang-command": "^2.0.0"
+	},
+	"devDependencies": {
+		"ava": "^3.3.0",
+		"eslint-config-richienb": "^0.3.0",
+		"xo": "^0.25.3"
+	},
+	"resolutions": {
+		"eslint": "^6.8.0"
+	},
+	"xo": {
+		"extends": "richienb/node"
+	}
 }

@@ -15,8 +15,10 @@ npm install shebang-file
 ```js
 const shebangFile = require("shebang-file");
 
-shebangFile("myFile.txt");
-//=> 'bash'
+(async () => {
+	await shebangFile("myScript.sh");
+	//=> 'bash'
+})();
 ```
 
 ## API
@@ -28,3 +30,9 @@ shebangFile("myFile.txt");
 Type: `string`
 
 The filename to parse the shebang from.
+
+## Migrating from v1
+
+- If a shebang isn't found, `undefined` is now returned instead of `null`.
+- Bluebird promises have been swapped out for native ones.
+- The minimum required Node.js version is now 8.x.

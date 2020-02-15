@@ -1,5 +1,3 @@
-import Promise from "bluebird"
-
 /**
  * Parse the shebang (if any) of a file.
  * @param filename The filename to parse the shebang from.
@@ -7,10 +5,12 @@ import Promise from "bluebird"
  * ```
  * const shebangFile = require("shebang-file");
  *
- * shebangFile("myFile.txt");
- * //=> 'bash'
+ * (async () => {
+ * 	await shebangFile("myScript.sh");
+ * 	//=> 'bash'
+ * })();
  * ```
 */
-declare function shebangFile(filename: string): Promise<string | null>;
+declare function shebangFile(filename: string): Promise<string | undefined>
 
-export = shebangFile;
+export = shebangFile
